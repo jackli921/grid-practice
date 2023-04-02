@@ -60,28 +60,41 @@ body {
 
 /* Task 3.1 */
 .task-3-1.container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto auto 1fr auto auto;
+  gap: 24px;
 }
 
 @media (min-width: 720px) {
   .task-3-1.container {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto 1fr auto;
   }
 
   .task-3-1 .header {
+    grid-column: 1/ span 12;
   }
 
   .task-3-1 .navigation {
+      grid-column: 1/ span 12;
   }
 
   .task-3-1 .main {
+      grid-column: 3 / span 10;
   }
 
   .task-3-1 .sidebar {
+    grid-column: 1/ 3;
+    grid-row:3;
   }
 
   .task-3-1 .ads {
+    grid-column:1/3;
   }
 
   .task-3-1 .footer {
+    grid-column: 3/span 10;
   }
 }
 
